@@ -6,7 +6,7 @@ import RandomizeButton from './components/RandomizeButton';
 
 function App() {
 	const [randomNumber, setRandomNumber] = useState(0);
-	const [interval, setInterval] = useState({ min: 0, max: 16 });
+	const [interval, setInterval] = useState({ min: 1, max: 16 });
 
 	const handleRandomize = () => {
 		setRandomNumber(
