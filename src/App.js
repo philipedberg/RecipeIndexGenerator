@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import confetti from 'canvas-confetti';
 import './App.css';
 
 function App() {
+  const [number, setNumber] = useState(0);
+
+  const handleClick = () => {
+    const randomNumber = Math.floor(Math.random() * 17);
+    setNumber(randomNumber);
+    confetti({
+      particleCount: 200,
+      spread: 360,
+      origin: { y: 0.45 },
+    });
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="number" >{number}</h1>
+      <button className="button" onClick={handleClick}>Randomize</button>
     </div>
   );
 }
