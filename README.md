@@ -6,7 +6,7 @@ Simple web GUI in React which randomizes a number between a certain interval.
 
 <div align = center>
 
-  [<kbd> <br> KeyBinding Button <br> </kbd>][KBD]
+  [<kbd> <br> Run App <br> </kbd>][KBD]
 
 </div>
 
