@@ -1,0 +1,21 @@
+.interval-container {
+	color: white;
+	display: flex;
+	align-items: center;
+	margin-top: 70px;
+}
+
+label {
+	margin-right: 10px;
+}
+
+input[type='number'] {
+	width: 50px;
+	padding: 10px;
+	border-radius: 5px;
+	border: 2px solid lightpink;
+	font-size: 16px;
+	text-align: center;
+	outline: none;
+	margin-right: 10px;
+}

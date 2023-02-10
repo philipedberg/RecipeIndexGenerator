@@ -1,5 +1,5 @@
 import React from 'react';
-import '../App.css';
+import '../styles/IntervalComponent.css';
 
 function IntervalComponent({ handleSetInterval, min, max }) {
 	return (
@@ -9,7 +9,6 @@ function IntervalComponent({ handleSetInterval, min, max }) {
 				id="min"
 				type="number"
 				defaultValue={min}
-				className="interval-input"
 				onChange={handleSetInterval}
 			/>
 			<label htmlFor="max">Max: </label>
@@ -17,7 +16,6 @@ function IntervalComponent({ handleSetInterval, min, max }) {
 				id="max"
 				type="number"
 				defaultValue={max}
-				className="interval-input"
 				onChange={handleSetInterval}
 			/>
 		</div>
