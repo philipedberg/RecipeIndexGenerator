@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import useSound from 'use-sound';
+import mySound from './sounds/sound.mp3';
 import confetti from 'canvas-confetti';
 import './App.css';
 import IntervalComponent from './components/IntervalComponent';
@@ -7,12 +9,14 @@ import RandomizeButton from './components/RandomizeButton';
 function App() {
 	const [randomNumber, setRandomNumber] = useState(0);
 	const [interval, setInterval] = useState({ min: 0, max: 16 });
+	const [playSound] = useSound(mySound, { volume: 0.15 });
 
 	const handleRandomize = () => {
 		setRandomNumber(
 			Math.floor(Math.random() * (interval.max - interval.min + 1)) +
 				interval.min
 		);
+		playSound();
 		confetti({
 			particleCount: 200,
 			spread: 360,
