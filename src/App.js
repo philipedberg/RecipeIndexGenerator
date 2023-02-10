@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import confetti from 'canvas-confetti';
 import './App.css';
 import IntervalComponent from './components/IntervalComponent';
+import RandomizeButton from './components/RandomizeButton';
 
 function App() {
 	const [randomNumber, setRandomNumber] = useState(0);
@@ -29,9 +30,7 @@ function App() {
 	return (
 		<div className="App">
 			<div className="number">{randomNumber}</div>
-			<button onClick={handleRandomize} className="randomize-button">
-				Randomize
-			</button>
+			<RandomizeButton onClick={handleRandomize} />
 			<IntervalComponent
 				handleSetInterval={handleSetInterval}
 				min={interval.min}
