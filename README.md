@@ -12,4 +12,4 @@ Simple web GUI in React which randomizes a number between a certain interval.
 
 <!---------------------------------------------------------------------------->
 
-[KBD]: Types/KBD.md
+[KBD]: https://recipe-index-generator.netlify.app
